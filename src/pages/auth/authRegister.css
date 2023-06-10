@@ -1,0 +1,63 @@
+.register-admin-create-users-panel-wrapper{
+    width:100vw;
+    height:100dvh;
+    overflow: hidden;
+}
+
+.register-admin-created-wrapper{
+    width:100vw;
+    height:100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    
+}
+.register-admin-create-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+    background-color: var(--light-primary);
+    border-radius: 1rem;
+}
+.dark-mode-parent .register-admin-create-popup{
+    background-color: var(--dark-secondary);
+}
+.register-admin-create-popup button{
+    width:20%;
+    height:15%;
+    background-color: var(--light-detail);
+    color: var(--light-primary);
+    border-radius: 0.4rem;
+    border: none;
+    margin-top: 1rem;
+}
+.dark-mode-parent .register-admin-create-popup button{
+    background-color: var(--dark-detail);
+    color: var(--dark-primary);
+}
+.register-admin-create-popup button:hover{
+    transform: scale(1.05);
+    transition:all 0.5s;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1100px) {
+    .after-registration-box{
+        width:20rem;
+        height:30rem;
+    }
+    .register-admin-create-popup{
+        width:28rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .register-admin-create-popup{
+        width:20rem;
+    }
+}

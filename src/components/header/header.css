@@ -1,0 +1,109 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.header-wrapper-sub{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	height: 10dvh;
+	color: var(--textColor);
+	/* border: 2px solid black; */
+}
+.header-logo-section{
+  width:40%;
+  height:100%;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1rem;
+}
+.header-logo-section img{
+	height:100%;
+}
+.dark-mode-parent .header-logo-section img{
+	filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(7deg) brightness(107%) contrast(100%);
+}
+.header-detail-section{
+  width:60%;
+  height:100%;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.header-detail-1{
+	width:30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	/* border: 2px solid black; */
+}
+.dark-mode-parent .header-detail-1 button{
+	color: var(--dark-detail);
+	background-color: var(--dark-primary);
+	border: 2px solid var(--dark-detail);
+}
+.header-detail-2{
+	width:30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 2px solid black; */
+}
+.header-detail-1 button{
+	width:3rem;
+	height: 3rem;
+	border-radius: 1.5rem;
+	background-color: var(--light-secondary);
+}
+.dark-mode-parent .header-detail-2 button{
+	color: var(--dark-primary);
+	background-color: var(--dark-primary);
+}
+.dark-mode-parent .header-detail-2 button:hover{
+	transform: scale(1.05);
+	transform: scale(1.1);
+}
+.header-detail-2 button{
+	width:60%;
+	height:70%;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	color: var(--light-primary);
+	background-color: var(--dark-primary);
+	transition: all 0.5s;
+}
+.header-detail-1 button:hover,
+.header-detail-2 button:hover{
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
+.dark-mode-parent .header-detail-2 button{
+	color: var(--dark-primary);
+	background-color: var(--light-primary);
+}
+.dark-mode-parent .header-detail-2 button:hover{
+	transform: scale(1.05);
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width: 800px) {
+	.header-detail-1,
+	.header-detail-2{
+		width:50%;
+	}
+	.header-detail-1{
+		justify-content: right;
+	}
+}
+@media only screen and (max-width:600px){
+	.header-logo-section img{
+		content: url("../../assets/Logo-Small.svg");
+	}
+}

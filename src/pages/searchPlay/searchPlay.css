@@ -1,0 +1,187 @@
+.search-play-wrapper{
+    width:100vw;
+    height:100dvh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(63,90,128);
+    background: linear-gradient(180deg, rgba(63,90,128,1) 0%, rgba(255,255,255,1) 37%); */
+}
+
+.search-play-main{
+    width:85vw;
+    height:100%;
+}
+
+/* SEARCH BAR */
+.player-search-section{
+    width:100%;
+    height:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-search-section-subsection{
+    width:70%;
+    height:50%;
+    display: flex;
+    border-radius: 0.7rem;
+    border:2px solid var(--dark-primary);
+}
+.player-search-section-subsection input{
+    width:90%;
+    height:100%;
+    padding-left: 1%;
+    background-color: var(--light-primary);
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    border: none;
+    font-size: 1.5rem
+}
+.dark-mode-parent .player-search-section-subsection input,
+.dark-mode-parent .player-search-section-subsection button{
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
+}
+.player-search-section-subsection input:focus{
+    outline: none;
+}
+.dark-mode-parent .player-search-section-subsection{
+    border: 2px solid var(--light-primary);
+}
+.player-search-section-subsection button{
+    width:10%;
+    height:100%;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    background-color: var(--light-primary);
+    border:none;
+}
+.search-song-count{
+    width:100%;
+    height:5%;
+    color:var(--light-detail);
+    text-align: center;
+}
+.dark-mode-parent .search-song-count{
+    color:var(--dark-detail);
+}
+/* MUSIC CARD FEATURE */
+.search-play-display{
+    width:100%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-play-display-box{
+    width:80%;
+    height:85%;
+    /* border: 2px solid red; */
+    overflow-y: scroll;
+
+    /* GRID */
+    display: grid;
+    gap: 1.5rem;
+
+}
+.music-card-main{
+    height:14rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.music-card{
+    width: max(13vw,200px);
+    height:14rem;
+    background-color: var(--light-primary);
+    border: none;
+    border-radius: 1rem;
+}
+.dark-mode-parent .music-card{
+    background-color: var(--dark-secondary);
+}
+.music-card-img{
+    width:100%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-card-img img{
+    width:80%;
+    height:80%;
+}
+.music-card-text{
+    width:100%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-detail);
+}
+.dark-mode-parent .music-card-text{
+    color: var(--dark-detail);
+}
+.search-play-btn-hover{
+    position: relative;
+    top: -100%;
+    /* left: 40%; */
+    width:100%;
+    height:100%;
+    border-radius: 1rem;
+    color: var(--light-primary);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    opacity: 0;
+    background-color: rgba(99, 99, 99, 0.267);
+}
+.search-play-btn-hover:hover{
+    opacity: 1;
+    color: var(--light-primary);
+    font-size: 1.3rem;
+    transition: all 0.5s;
+
+}
+.search-play-display-box::-webkit-scrollbar {
+    width:12px;         /* width of the entire scrollbar */
+}
+.search-play-display-box::-webkit-scrollbar-thumb {
+    background-color: var(--light-secondary);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.dark-mode-parent .search-play-display-box::-webkit-scrollbar-thumb {
+    background-color: var(--dark-primary);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+@media (min-width: 600px) {
+    .search-play-display-box { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+    .search-play-display-box { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1200px) {
+    .search-play-display-box { grid-template-columns: repeat(4, 1fr); }
+}
+@media only screen and (max-width: 1100px) {
+    .search-play-main{
+        width:100vw;
+        height:92%;
+    }
+    .search-play-display-box{
+        width:100%;
+        height:90%; 
+    }
+    .player-search-section-subsection{
+        width:90%;
+        height:50%;
+    }
+}
+

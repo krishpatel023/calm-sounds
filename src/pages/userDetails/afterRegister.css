@@ -1,0 +1,169 @@
+.after-registration-wrapper{
+    width:100vw;
+    height:100dvh;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.after-registration-box{
+    width:30rem;
+    height:40rem;
+    border-radius: 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-primary);
+}
+.dark-mode-parent .after-registration-box{
+    background-color: var(--dark-secondary);
+}
+.after-registration-back{
+    width:100%;
+    height:10%;
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding:0 10%;
+}
+.after-registration-back button{
+    width:20%;
+    height:60%;
+    position: relative;
+    top: 25%;
+    border-radius: 0.3rem;
+    background-color: var(--light-primary);
+    border: 2px solid var(--light-detail);
+}
+.dark-mode-parent .after-registration-back button{
+    background-color: var(--dark-secondary);
+    border: 2px solid var(--dark-detail);
+    color:var(--dark-detail);
+}
+.after-registration-back button:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+.after-registration-image-section{
+    width:100%;
+    height:30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid rgb(0, 0, 0); */
+}
+.after-registration-image-box{
+    width:12rem;
+    height:12rem;
+    border-radius: 6rem;
+    /* border:2px solid green; */
+}
+.ar-image{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+.ar-image img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    z-index: 2;
+}
+.ar-image input{
+    display: none;
+}
+.ar-button{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    position: relative;
+    top: -12rem;
+    z-index: 10;
+}
+.ar-button button{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.653);
+    border: none;
+    color: black;
+    opacity: 0.6;
+}
+.ar-button button:hover{
+    font-size: 1.5rem;
+    background-color: rgba(80, 80, 80, 0.242);
+    color: var(--dark-primary);
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 1;
+}
+.dark-mode-parent .ar-button button{
+    background-color: rgba(255, 255, 255, 0.138);
+    color: white;
+}
+.after-registration-detail{
+    width:100%;
+    height:40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+.after-registration-detail input{
+    width:70%;
+    height:25%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    color: var(--dark-primary);
+}
+.dark-mode-parent .after-registration-detail input{
+    background-color: rgba(0, 255, 255, 0);
+    color: var(--dark-detail);
+    border: 2px solid var(--dark-detail);
+}
+.after-registration-btn{
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.after-registration-btn button{
+    width:40%;
+    height:40%;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
+}
+.dark-mode-parent .after-registration-btn button{
+    background-color: var(--dark-detail);
+    color: var(--dark-primary);
+}
+.after-registration-btn button:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+@media only screen and (max-width: 1100px) {
+    .after-registration-box{
+        width:20rem;
+        height:30rem;
+    }
+    .after-registration-image-box{
+        width:10rem;
+        height:10rem;
+        border-radius: 6rem;
+        /* border:2px solid green; */
+    }
+    .ar-button{
+        top: -10rem;
+    }
+}
